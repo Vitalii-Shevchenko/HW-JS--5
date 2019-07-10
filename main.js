@@ -80,9 +80,12 @@ function cursorCheck(str) {
 //Task #10
 
 function removeDuplicationLetters(str) {
-    let dublicateLatters='';
-    for (let i=0; i<str.length; i++){
-        if (dublicateLatters.indexOf(str[i])==-1){
+    let dublicateLatters=' ';
+    for (let i = 0; i < str.length; i++){
+        if (str[i] == ' '){
+            dublicateLatters += str[i];
+        }else if (dublicateLatters.toLowerCase().indexOf(str[i]) == -1 &&
+                  dublicateLatters.toUpperCase().indexOf(str[i]) == -1) {
             dublicateLatters += str[i];
         }
     }
